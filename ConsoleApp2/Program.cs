@@ -9,11 +9,18 @@ namespace Parsing
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            foreach (var arg in args)
+
+            Console.Write(">");
+            string? pars = Console.ReadLine();
+            if (pars != null)
             {
-                Console.WriteLine($"Аргументы = {arg}");
+                string[] commands = pars.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                foreach (string command in commands)
+                {
+                    Console.WriteLine($" Argument+ {command}");
+                }
             }
 
         }
