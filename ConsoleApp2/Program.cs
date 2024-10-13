@@ -20,7 +20,7 @@ namespace Parsing
             {
                 string target = "";
                 //string[] commands = pars.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                string pattern = @"(-{1,2}\w+)(?:=(\""[^\""]*\""|\S+))?|(\""[^\""]*\"")|(\S+)";
+                string pattern = @"(-{1,2}\w+)(?:=(\""[^\""]*\""|\S+))?|(\S+)";
                 // (?<arg>-{ 1,1}\w)(=""(.*?)""){0,}| (?< arg > -{ 2,2}\w +)(= ""(.*?)""){ 0,}| (?< arg > -{ 0,1}\w +)(= ""(\d)""){ 0,}
 
                 var regex = new Regex(pattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
